@@ -4,13 +4,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-slate-900 text-white">
+      <section className="relative overflow-hidden bg-[#0B1220] text-white">
         <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Image src="/plumb-dial-logo.svg" alt="Plumb Dial" width={220} height={48} className="mb-8" />
             <h1 className="text-5xl font-extrabold mb-6 leading-tight">Never Miss Another Plumbing Job</h1>
             <p className="text-xl text-slate-300 mb-10">When you can’t answer the phone, Plumb Dial does — books the job, sends reminders, and follows up so you don’t lose work.</p>
-            <a href="#pricing" className="inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-900 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg">Protect My Phone Now</a>
+            <a href="#pricing" className="inline-block bg-[#2DD4BF] hover:bg-[#1FB6A8] text-[#0B1220] px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">Protect My Phone Now</a>
           </div>
           <div className="flex justify-center">
             <Image src="/mockup-new-job.svg" alt="Plumb Dial mobile dashboard" width={320} height={640} priority />
@@ -19,7 +19,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-bold mb-12 text-center">How It Works</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border rounded-2xl p-6">
