@@ -2,104 +2,72 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F5F7FA] text-[#0B1220]">
-      {/* Top Bar */}
-      <header className="bg-[#0B1220] text-white border-b-4 border-[#1F3A5F]">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Image src="/plumb-dial-logo.svg" alt="Plumb Dial" width={200} height={44} />
-          <span className="hidden md:block text-sm tracking-wide text-slate-300">AI Front Office for Plumbers</span>
-        </div>
-      </header>
-
+    <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="bg-[#0B1220] text-white">
-        <div className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative overflow-hidden bg-[#0B1220] text-white">
+        <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-6xl font-extrabold leading-tight mb-8">Never Miss<br />Another Plumbing Job</h1>
-            <p className="text-xl text-slate-300 mb-10 max-w-xl">When you can’t answer the phone, Plumb Dial does. Calls answered, jobs booked, reminders sent — automatically.</p>
-            <div className="flex gap-4">
-              <a href="#pricing" className="bg-[#2DD4BF] hover:bg-[#1FB6A8] text-[#0B1220] px-10 py-4 rounded-lg text-lg font-bold shadow-xl">Protect My Phone</a>
-              <span className="self-center text-sm text-slate-400">No installs. Cancel anytime.</span>
-            </div>
+            <Image src="/plumb-dial-logo.svg" alt="Plumb Dial" width={220} height={48} className="mb-8" />
+            <h1 className="text-5xl font-extrabold mb-6 leading-tight">Never Miss Another Plumbing Job</h1>
+            <p className="text-xl text-slate-300 mb-10">When you can’t answer the phone, Plumb Dial does — books the job, sends reminders, and follows up so you don’t lose work.</p>
+            <a href="#pricing" className="inline-block bg-[#2DD4BF] hover:bg-[#1FB6A8] text-[#0B1220] px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">Protect My Phone Now</a>
           </div>
-          <div className="relative">
-            <div className="absolute -top-6 -left-6 w-full h-full border-4 border-[#1F3A5F]" />
-            <Image src="/mockup-new-job.svg" alt="New job captured" width={340} height={680} className="relative bg-white" priority />
+          <div className="flex justify-center">
+            <Image src="/mockup-new-job.svg" alt="Plumb Dial mobile dashboard" width={320} height={640} priority />
           </div>
         </div>
       </section>
 
-      {/* Problem Strip */}
-      <section className="bg-white border-y-4 border-[#1F3A5F]">
-        <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10 text-center">
-          <div className="border-2 border-[#CBD5E1] p-6">
-            <p className="font-bold text-lg mb-2">Missed Calls</p>
-            <p className="text-slate-600">Customers call the next plumber when you don’t answer.</p>
+      {/* How it works */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <h2 className="text-3xl font-bold mb-12 text-center">How It Works</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="border rounded-2xl p-6">
+            <Image src="/mockup-missed-call.svg" alt="Missed call logged" width={280} height={560} className="mx-auto mb-6" />
+            <p className="text-lg">Missed calls are answered instantly and logged automatically.</p>
           </div>
-          <div className="border-2 border-[#CBD5E1] p-6">
-            <p className="font-bold text-lg mb-2">Wasted Time</p>
-            <p className="text-slate-600">Chasing voicemails, texts, and follow-ups.</p>
+          <div className="border rounded-2xl p-6">
+            <Image src="/mockup-booked.svg" alt="Job booked" width={280} height={560} className="mx-auto mb-6" />
+            <p className="text-lg">Jobs are booked or callbacks scheduled without you touching the phone.</p>
           </div>
-          <div className="border-2 border-[#CBD5E1] p-6">
-            <p className="font-bold text-lg mb-2">Lost Jobs</p>
-            <p className="text-slate-600">Every missed call is lost money.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-extrabold mb-16">How Plumb Dial Works</h2>
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="bg-white border-l-4 border-[#2DD4BF] p-8">
-            <Image src="/mockup-missed-call.svg" alt="Missed call logged" width={280} height={560} className="mb-6" />
-            <p className="font-bold text-lg">AI answers missed calls instantly</p>
-            <p className="text-slate-600 mt-2">No voicemail. No delays.</p>
-          </div>
-          <div className="bg-white border-l-4 border-[#2DD4BF] p-8">
-            <Image src="/mockup-booked.svg" alt="Job booked" width={280} height={560} className="mb-6" />
-            <p className="font-bold text-lg">Jobs booked or callbacks scheduled</p>
-            <p className="text-slate-600 mt-2">Automatically, without your phone.</p>
-          </div>
-          <div className="bg-white border-l-4 border-[#2DD4BF] p-8">
-            <p className="font-bold text-lg">Confirmations & reminders sent</p>
-            <p className="text-slate-600 mt-2">Fewer no‑shows. Cleaner days.</p>
+          <div className="border rounded-2xl p-6">
+            <p className="text-lg">Confirmations, reminders, and follow-ups run automatically.</p>
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="bg-[#0B1220] text-white py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-extrabold mb-16">Straightforward Pricing</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white text-[#0B1220] p-10 border-4 border-[#2DD4BF]">
-              <h3 className="text-2xl font-extrabold mb-4">Solo Plumber</h3>
-              <p className="text-5xl font-extrabold mb-6">£249<span className="text-lg font-medium">/month</span></p>
-              <ul className="space-y-4 mb-8 text-lg">
-                <li>✔ AI answers missed & after‑hours calls</li>
+      <section id="pricing" className="bg-slate-50 py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-14 text-center">Simple Pricing</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="border rounded-2xl p-8 bg-white shadow-sm">
+              <h3 className="text-2xl font-bold mb-2">Solo Plumber</h3>
+              <p className="text-4xl font-extrabold mb-6">£249<span className="text-lg font-normal">/month</span></p>
+              <ul className="space-y-3 mb-8">
+                <li>✔ AI answers missed & after-hours calls</li>
                 <li>✔ Emergency vs routine triage</li>
-                <li>✔ Booking & reminders</li>
-                <li>✔ Anti‑ghosting follow‑ups</li>
+                <li>✔ Booking + reminders</li>
+                <li>✔ Follow-ups on missed leads</li>
               </ul>
-              <a href="#" className="block bg-[#0B1220] text-white text-center py-4 font-bold">Start Now</a>
+              <a href="#" className="block bg-slate-900 text-white text-center py-4 rounded-xl">Start Free Trial</a>
             </div>
-            <div className="bg-white text-[#0B1220] p-10 border-4 border-[#CBD5E1]">
-              <h3 className="text-2xl font-extrabold mb-4">Team</h3>
-              <p className="text-5xl font-extrabold mb-6">£399<span className="text-lg font-medium">/month</span></p>
-              <ul className="space-y-4 mb-8 text-lg">
+            <div className="border rounded-2xl p-8 bg-white shadow-sm">
+              <h3 className="text-2xl font-bold mb-2">Team</h3>
+              <p className="text-4xl font-extrabold mb-6">£399<span className="text-lg font-normal">/month</span></p>
+              <ul className="space-y-3 mb-8">
                 <li>✔ Multiple phone numbers</li>
                 <li>✔ Team routing & escalation</li>
                 <li>✔ Priority alerts</li>
                 <li>✔ Higher call volume</li>
               </ul>
-              <a href="#" className="block bg-[#0B1220] text-white text-center py-4 font-bold">Start Now</a>
+              <a href="#" className="block bg-slate-900 text-white text-center py-4 rounded-xl">Start Free Trial</a>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-white text-center py-10 text-slate-500 border-t-2 border-[#CBD5E1]">© {new Date().getFullYear()} Plumb Dial</footer>
+      <footer className="text-center py-10 text-slate-500">© {new Date().getFullYear()} Plumb Dial</footer>
     </main>
   );
 }
